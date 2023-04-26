@@ -10,8 +10,8 @@
 <style lang="less">
 .form {
   background-color: @color-basic-white;
-  box-shadow: 0px 12px 24px rgba(44, 39, 56, 2%),
-    0px 32px 64px rgba(44, 39, 56, 4%);
+  box-shadow: 0px 12px 24px rgba(@color-basic-black-2, 2%),
+    0px 32px 64px rgba(@color-basic-black-2, 4%);
   border-radius: 24px;
   margin: 0 auto;
   padding: 2em 1.87em;
@@ -41,9 +41,9 @@
   }
 
   .btn {
-    background: #0880ae;
-    box-shadow: 0px 2px 4px rgba(44, 39, 56, 8%),
-      0px 4px 8px rgba(44, 39, 56, 8%);
+    background: @color-el-active;
+    box-shadow: 0px 2px 4px rgba(@color-basic-black-2, 8%),
+      0px 4px 8px rgba(@color-basic-black-2, 8%);
     padding: 1.05em;
   }
 }

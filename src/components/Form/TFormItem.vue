@@ -69,11 +69,11 @@ const props = defineProps({
 }
 
 .form-input {
-  @input-border-color: @color-el-disabled;
+  @input-border-color: @color-el-inactive;
 
   color: @color-basic-black-2;
   background-color: @color-basic-white;
-  border: 1px solid @input-border-color;
+  border: 1px solid @color-el-inactive;
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 400;
@@ -85,7 +85,8 @@ const props = defineProps({
   transition: 0.1s ease-in;
 
   &:focus {
-    border-color: darken(@input-border-color, 18%);
+    @input-border-color: @color-el-inactive;
+    border-color: @color-el-active;
     box-shadow: 0px 4px 8px rgba(@color-basic-black-2, 4%);
   }
 }
