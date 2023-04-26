@@ -1,6 +1,7 @@
 <script setup>
 import TForm from "@/components/Form/TForm.vue";
 import TFormItem from "@/components/Form/TFormItem.vue";
+import TFormCheckbox from "@/components/Form/TFormCheckbox.vue";
 import TButton from "@/components/TButton.vue";
 
 function submit() {
@@ -26,10 +27,9 @@ function submit() {
       <t-form-item :label="'Язык'" :label-position="'top'"> </t-form-item>
 
       <div class="form-item">
-        <input type="checkbox" id="inputPrivacy" />
-        <label for="inputPrivacy">
+        <t-form-checkbox :label="true">
           Принимаю <a href="#">условия</a> использования
-        </label>
+        </t-form-checkbox>
       </div>
 
       <div class="form-item form-controls">
@@ -41,7 +41,7 @@ function submit() {
 
 <style lang="less" scoped>
 .section__form-auth {
-  max-width: 360px;
+  max-width: 460px;
   margin: auto;
 
   .form-controls .btn {

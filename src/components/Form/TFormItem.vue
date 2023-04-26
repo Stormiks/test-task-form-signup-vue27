@@ -95,7 +95,6 @@ defineProps({
   }
 
   &:focus {
-    @input-border-color: @color-el-inactive;
     border-color: @color-el-active;
     box-shadow: 0px 4px 8px rgba(@color-basic-black-2, 4%);
   }
