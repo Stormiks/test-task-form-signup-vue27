@@ -1,7 +1,7 @@
 <script setup>
 import { defineProps } from "vue";
 
-const props = defineProps({
+defineProps({
   label: {
     type: String,
     default: "",
@@ -24,8 +24,9 @@ const props = defineProps({
         'd-block': labelPosition === 'top',
       }"
       for="formItem"
-      >{{ label }}</label
     >
+      {{ label }}
+    </label>
     <div class="form-field">
       <input class="form-input" id="formItem" type="text" />
     </div>
@@ -83,6 +84,15 @@ const props = defineProps({
   border-radius: 6px;
   outline: none;
   transition: 0.1s ease-in;
+
+  &::placeholder {
+    color: #7c9cbf;
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+  }
 
   &:focus {
     @input-border-color: @color-el-inactive;
