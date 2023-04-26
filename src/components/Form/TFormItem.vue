@@ -69,7 +69,7 @@ const props = defineProps({
 }
 
 .form-input {
-  @input-border-color: #dbe2ea;
+  @input-border-color: @color-el-disabled;
 
   color: @color-basic-black-2;
   background-color: @color-basic-white;

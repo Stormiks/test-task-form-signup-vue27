@@ -41,5 +41,13 @@ const props = defineProps({
       0px 4px 8px rgba(44, 39, 56, 8%);
     border: 1px solid rgba(#2c2738, 86%);
   }
+
+  &[disabled] {
+    color: @color-basic-black-2;
+    background: @color-el-disabled;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 8%);
+    pointer-events: none;
+    opacity: 0.5;
+  }
 }
 </style>

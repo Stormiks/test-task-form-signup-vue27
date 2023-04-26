@@ -44,7 +44,7 @@ function submit() {
   max-width: 360px;
   margin: auto;
 
-  .btn {
+  .form-controls .btn {
     width: 100%;
   }
 }
