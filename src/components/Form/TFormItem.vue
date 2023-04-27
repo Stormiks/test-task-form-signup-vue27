@@ -17,7 +17,13 @@ defineProps({
 </script>
 
 <template>
-  <div class="form-item">
+  <div
+    class="form-item"
+    :class="{
+      'fx-col': labelPosition === 'top',
+      'fx-row': ['left', 'right'].includes(labelPosition),
+    }"
+  >
     <label
       class="form-label"
       :class="{
@@ -36,6 +42,19 @@ defineProps({
 <style lang="less">
 .form-item {
   margin-bottom: 2.12em;
+
+  &.fx-row,
+  &.fx-col {
+    display: flex;
+  }
+
+  &.fx-row {
+    flex-direction: row;
+  }
+
+  &.fx-col {
+    flex-direction: column;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -59,7 +78,7 @@ defineProps({
 
 .form-field {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
 
   input {
@@ -70,8 +89,6 @@ defineProps({
 }
 
 .form-input {
-  @input-border-color: @color-el-inactive;
-
   color: @color-basic-black-2;
   background-color: @color-basic-white;
   border: 1px solid @color-el-inactive;
