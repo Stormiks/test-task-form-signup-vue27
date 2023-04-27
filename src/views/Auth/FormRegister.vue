@@ -2,6 +2,7 @@
 import TForm from "@/components/Form/TForm.vue";
 import TFormItem from "@/components/Form/TFormItem.vue";
 import TFormCheckbox from "@/components/Form/TFormCheckbox.vue";
+import TFormSelect from "@/components/Form/Select/TFormSelect.vue";
 import TButton from "@/components/TButton.vue";
 
 function submit() {
@@ -20,11 +21,15 @@ function submit() {
         </span>
       </template>
 
-      <t-form-item :label="'Имя'" :label-position="'top'"> </t-form-item>
-      <t-form-item :label="'Email'" :label-position="'top'"> </t-form-item>
+      <t-form-item :label="'Имя'" :label-position="'top'"></t-form-item>
+      <t-form-item :label="'Email'" :label-position="'top'"></t-form-item>
       <t-form-item :label="'Номер телефона'" :label-position="'top'">
       </t-form-item>
-      <t-form-item :label="'Язык'" :label-position="'top'"> </t-form-item>
+      <t-form-item :label="'Язык'" :label-position="'top'">
+        <template #field-content>
+          <t-form-select />
+        </template>
+      </t-form-item>
 
       <div class="form-item">
         <t-form-checkbox :label="true">

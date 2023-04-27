@@ -28,7 +28,9 @@ defineProps({
       {{ label }}
     </label>
     <div class="form-field">
-      <input class="form-input" id="formItem" type="text" />
+      <slot name="field-content">
+        <input class="form-input" id="formItem" type="text" />
+      </slot>
     </div>
   </div>
 </template>
